@@ -1,15 +1,15 @@
 <template>
-  <div>
-    <a href="#/">Home</a> | <a href="#/about">About</a> |
-    <a href="#/non-existent-path">Broken Link</a>
-    <component :is="currentView" />
-  </div>
+    <div>
+        <router-link to="/"> HOME </router-link>
+        <router-link to="/about"> ABOUT </router-link>
+        <router-view></router-view>
+    </div>
 </template>
 
 <script>
-import Home from "./Home.vue";
+import Home from "./views/Home.vue";
 // import About from './About.vue'
-import NotFound from "./NotFound.vue";
+import NotFound from "./views/NotFound.vue";
 
 const routes = {
   "/": Home,
@@ -29,9 +29,9 @@ export default {
     },
   },
   mounted() {
-    window.addEventListener("hashchange", () => {
-      this.currentPath = window.location.hash;
-    });
+    // window.addEventListener("hashchange", () => {
+    //   this.currentPath = window.location.hash;
+    // });
   },
 };
 </script>
