@@ -1,6 +1,9 @@
 name: BrowserTests
 
-on: [push]
+on:
+  push:
+    branches-ignore:
+      - '**'
 
 env:
   PLAYWRIGHT_BROWSERS_PATH: 0
