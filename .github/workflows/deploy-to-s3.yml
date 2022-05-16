@@ -56,4 +56,4 @@ jobs:
           DEST_PATH: "s3://upbond-demo-tkey/public"
           # acl (set access permissions)
           # delete option (removing files that do not exist in the source )
-          OPTIONS: "--acl public-read"
+          # OPTIONS: "--acl public-read"
